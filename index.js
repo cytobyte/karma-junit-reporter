@@ -68,7 +68,6 @@ var JUnitReporter = function (baseReporterDecorator, config, logger, helper, for
 
     // Creates the outermost XML element: <unitTest>
     var initializeXmlForBrowser = function (browser) {
-        console.log(browser);
         var timestamp = (new Date()).toISOString().substr(0, 19)
         var suite
         if (NEWXML) {
@@ -165,6 +164,7 @@ var JUnitReporter = function (baseReporterDecorator, config, logger, helper, for
     // "browser_complete" - a test run has completed in _this_ browser
     // writes the XML to file and releases memory
     this.onBrowserComplete = function (browser) {
+        console.log(browser);
         var suite = suites[browser.id]
         var result = browser.lastResult
         if (!suite || !result) {
