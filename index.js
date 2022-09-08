@@ -256,10 +256,10 @@ const JUnitReporter = function (baseReporterDecorator, config, logger, helper, f
                         }
                     }
                     // Dont report skipped tests
-                    if (result.skipped) {
+                    // if (result.skipped) {
                         // spec.ele('skipped');
-                        return;
-                    }
+                        // return;
+                    // }
 
                     if (!result.success) {
                         result.log.forEach(function (err) {
